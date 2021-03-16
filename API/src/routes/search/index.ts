@@ -8,8 +8,6 @@ export default [
     path: '/search',
     async handler(request: any, h: any) {
       try {
-        console.log('QDEV', soundex(request.query.q))
-
         const users: Array<IUser> = await User.find({
           $or: [
             { soundexName: soundex(request.query.q) },
