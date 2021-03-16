@@ -1,0 +1,27 @@
+version: '3'
+services:
+  mongo:
+    container_name: 'mongo'
+    image: bitnami/mongodb
+    ports: 
+      - 27017:27017
+    environment:
+      - MONGODB_USERNAME=mushroomsoft
+      - MONGODB_PASSWORD=1234
+      - MONGODB_DATABASE=mushroomsoft
+  api:
+    container_name: 'api'
+    build:
+      context: ./API/.
+      dockerfile: Dockerfile
+    ports: 
+      - 3000:3000
+    volumes: 
+      - ./API:/code
+      - node_modules:/code/node_modules
+    depends_on: 
+      - mongo
+    links:
+      - mongo:mongo
+volumes:
+  node_modules:

@@ -1,0 +1,30 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "API - REST for Github API",
+  "main": "dist",
+  "scripts": {
+    "preinstall": "npm i",
+    "compile": "tsc --project tsconfig.json",
+    "server:start": "nodemon --legacy-watch --config nodemon.json",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npm-run-all --parallel compile server:start"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@hapi/boom": "^9.1.1",
+    "@hapi/hapi": "^20.1.0",
+    "@types/node": "^14.14.34",
+    "mongoose": "^5.11.11",
+    "soundex-phonetics": "^1.0.1"
+  },
+  "devDependencies": {
+    "@types/hapi__hapi": "^20.0.5",
+    "@types/mongoose": "^5.10.3",
+    "nodemon": "^2.0.7",
+    "npm-run-all": "^4.1.5",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.3"
+  }
+}
