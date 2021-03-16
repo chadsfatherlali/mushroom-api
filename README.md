@@ -3,7 +3,7 @@
 ### 1.1 Instalación de Docker
 
 Necesitamos Docker y Docker-compose para correr el ambiente, aquí estan links para instalar Docker en diferentes plataformas (Docker-compose viene incluido con la instalación de Docker
-como se especifica [aquí](https://docs.docker.com/compose/install/))
+como se especifica [aquí](https://docs.docker.com/compose/install/)).
 
 * Windows
 [Docker para Windows](https://docs.docker.com/docker-for-windows/install/)
