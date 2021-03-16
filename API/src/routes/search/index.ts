@@ -8,10 +8,12 @@ export default [
     path: '/search',
     async handler(request: any, h: any) {
       try {
+        const q = soundex(request.query.q)
+
         const users: Array<IUser> = await User.find({
           $or: [
-            { soundexName: soundex(request.query.q) },
-            { soundexLogin: soundex(request.query.q) },
+            { soundexName: q },
+            { soundexLogin: q },
           ],
         })
 
